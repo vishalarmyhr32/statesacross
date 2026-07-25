@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ THEME (anti-flash) ============ -->
+<script>
+  (function(){
+    var saved = localStorage.getItem('sa-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
+<!-- ============ SEO META ============ -->
+<title>StatesAcross Tax and Business Services | Tax, Accounting &amp; Compliance Experts</title>
+<meta name="description" content="StatesAcross Tax and Business Services helps entrepreneurs, startups, and established businesses with tax preparation, bookkeeping, payroll, business registration, and compliance filings across the USA and Canada.">
+<meta name="keywords" content="tax services, business registration, accounting, bookkeeping, payroll, business consulting, compliance, annual filings, startup taxes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.statesacross.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="StatesAcross Tax and Business Services">
+<meta property="og:description" content="Helping businesses grow with expert tax, accounting, and compliance solutions across the USA and Canada.">
+<meta property="og:url" content="https://www.statesacross.com/">
+<meta property="og:image" content="https://www.statesacross.com/assets/og-image.jpg">
+<meta property="og:site_name" content="StatesAcross Tax and Business Services">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StatesAcross Tax and Business Services">
+<meta name="twitter:description" content="Expert tax, accounting, payroll, and compliance solutions for businesses of every size.">
+<meta name="twitter:image" content="https://www.statesacross.com/assets/og-image.jpg">
+
+<!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "StatesAcross Tax and Business Services",
+  "description": "Professional tax preparation, accounting, payroll, business registration, and compliance services for businesses and individuals.",
+  "areaServed": ["US", "CA"],
+  "email": "hello@statesacross.com",
+  "telephone": "+1-800-555-0134",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "url": "https://www.statesacross.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="data:,">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind (CDN / Play) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0B1F3A',
+          secondary: '#124E8C',
+          accent: '#1E88E5',
+          bg: '#F8FAFC',
+          ink: '#1F2937',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="bg-bg text-ink font-body antialiased">
+
+<!-- ============ DARK MODE STARFIELD ============ -->
+<div id="stars-bg" aria-hidden="true"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-20" aria-label="Primary">
+    <a href="#home" class="flex items-center gap-2.5 group" aria-label="StatesAcross home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <rect x="1" y="1" width="32" height="32" rx="9" fill="#0B1F3A"/>
+          <path d="M8 21 L14 14 L18.5 18 L26 9" stroke="#1E88E5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M21 9 H26 V14" stroke="#1E88E5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </span>
+      <span class="font-display font-semibold text-lg tracking-tight nav-logo-text">StatesAcross</span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-10 font-medium text-[15px] nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="hidden lg:flex items-center gap-5">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb">
+            <i data-lucide="sun" class="icon-sun"></i>
+            <i data-lucide="moon" class="icon-moon"></i>
+          </span>
+        </span>
+      </button>
+
+      <a href="#contact" class="btn-ripple inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-secondary transition-colors duration-300 shadow-lg shadow-accent/20">
+        Book a Consultation
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-[5px]" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="mobile-menu-backdrop" class="lg:hidden fixed inset-0 z-30" aria-hidden="true"></div>
+
+  <!-- Mobile Menu (right-aligned drawer) -->
+  <div id="mobile-menu" class="lg:hidden fixed inset-y-0 right-0 h-screen w-1/2 max-w-[420px] min-w-[260px] bg-primary translate-x-full transition-transform duration-500 ease-out z-40 mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <ul class="flex flex-col items-start justify-center h-full gap-6 font-display text-2xl text-white px-10">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#about" class="mobile-link">About Us</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li class="pt-4">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-accent text-white text-base font-semibold font-body px-7 py-3 rounded-full">Book a Consultation</a>
+      </li>
+      <li class="pt-2">
+        <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb">
+              <i data-lucide="sun" class="icon-sun"></i>
+              <i data-lucide="moon" class="icon-moon"></i>
+            </span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HOME / HERO ============ -->
+<section id="home" class="relative overflow-hidden hero-section">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-40 pb-24 lg:pt-48 lg:pb-32 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-16 items-center">
+
+      <div class="lg:col-span-7">
+        <p data-aos="fade-up" class="eyebrow mb-6"><span class="eyebrow-dot"></span>Tax &amp; Business Advisory, USA &amp; Canada</p>
+
+        <h1 data-aos="fade-up" data-aos-delay="80" class="font-display font-medium text-[2.6rem] leading-[1.08] sm:text-6xl sm:leading-[1.06] text-primary tracking-tight">
+          Helping Businesses Grow with Expert Tax &amp; Business Solutions
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="160" class="mt-7 text-lg text-ink/70 max-w-xl leading-relaxed">
+          Professional tax, accounting, compliance, and business consulting services designed to help your business succeed — from first filing to long-term growth.
+        </p>
+
+        <div data-aos="fade-up" data-aos-delay="240" class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#contact" class="btn-ripple inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-4 rounded-full hover:bg-secondary transition-all duration-300 shadow-xl shadow-accent/25 hover:-translate-y-0.5">
+            Book a Consultation
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#contact" class="btn-ripple inline-flex items-center gap-2 border border-primary/15 text-primary font-semibold px-7 py-4 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div data-aos="fade-up" data-aos-delay="320" class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl trust-badges">
+          <div class="trust-badge">
+            <i data-lucide="shield-check" class="trust-badge-icon"></i>
+            <p>Licensed &amp; Insured</p>
+          </div>
+          <div class="trust-badge">
+            <i data-lucide="user-check" class="trust-badge-icon"></i>
+            <p>Background Checked</p>
+          </div>
+          <div class="trust-badge">
+            <i data-lucide="thumbs-up" class="trust-badge-icon"></i>
+            <p>Satisfaction Guarantee</p>
+          </div>
+          <div class="trust-badge">
+            <i data-lucide="zap" class="trust-badge-icon"></i>
+            <p>Fast Response</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="lg:col-span-5 relative" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-art-card">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <p class="text-white/50 text-xs font-mono uppercase tracking-wider">Portfolio Growth</p>
+              <p class="text-white font-display text-2xl mt-1">+42.8% YoY</p>
+            </div>
+            <span class="flex items-center gap-1 text-emerald-300 text-xs font-mono bg-emerald-400/10 px-2.5 py-1 rounded-full">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> Filed
+            </span>
+          </div>
+
+          <svg viewBox="0 0 320 140" class="w-full h-32" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="lineFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1E88E5" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#1E88E5" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path id="growth-fill" d="M0,120 C40,110 60,95 90,90 C120,85 140,60 170,55 C200,50 220,35 250,28 C270,23 290,15 320,10 L320,140 L0,140 Z" fill="url(#lineFill)"/>
+            <path id="growth-line" d="M0,120 C40,110 60,95 90,90 C120,85 140,60 170,55 C200,50 220,35 250,28 C270,23 290,15 320,10" fill="none" stroke="#1E88E5" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+
+          <div class="grid grid-cols-2 gap-3 mt-6">
+            <div class="mini-stat">
+              <i data-lucide="file-check-2" class="w-4 h-4 text-accent"></i>
+              <p class="text-white text-sm font-medium mt-2">Filings Current</p>
+              <p class="text-white/40 text-xs">All jurisdictions</p>
+            </div>
+            <div class="mini-stat">
+              <i data-lucide="shield-check" class="w-4 h-4 text-accent"></i>
+              <p class="text-white text-sm font-medium mt-2">Compliance</p>
+              <p class="text-white/40 text-xs">100% up to date</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-badge float-badge-1">
+          <i data-lucide="calendar-check" class="w-4 h-4 text-accent"></i>
+          <span>Next filing in 12 days</span>
+        </div>
+        <div class="float-badge float-badge-2">
+          <i data-lucide="badge-check" class="w-4 h-4 text-emerald-500"></i>
+          <span>IRS &amp; State Registered</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <a href="#services" class="scroll-cue" aria-label="Scroll to services">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative py-28 lg:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16" data-aos="fade-up">
+      <p class="eyebrow mb-5"><span class="eyebrow-dot"></span>What We Do</p>
+      <h2 class="font-display font-medium text-4xl sm:text-5xl text-primary tracking-tight leading-tight">
+        Full-service support for every stage of your business
+      </h2>
+      <p class="mt-5 text-ink/65 text-lg leading-relaxed">
+        From formation to annual compliance, our advisors handle the financial and regulatory work so you can focus on running your business.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon"><i data-lucide="building-2"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Business Registration</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Entity formation, registration, and tax ID setup handled correctly the first time, in any state or province you operate.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon"><i data-lucide="receipt-text"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Tax Preparation</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Accurate federal, state, and provincial tax filing for individuals and businesses across the USA and Canada, with year-round planning to reduce liability.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon"><i data-lucide="calculator"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Accounting &amp; Bookkeeping</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Clean, reconciled books every month, giving you a clear picture of cash flow and financial health.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon"><i data-lucide="banknote"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Payroll Services</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">On-time payroll processing, tax withholding, and filings that keep your team paid and your business compliant.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon"><i data-lucide="line-chart"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Business Consulting</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Strategic guidance on structure, growth, and financial decisions from advisors who know your industry.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon"><i data-lucide="shield-check"></i></div>
+        <h3 class="font-display text-xl text-primary mt-6">Compliance &amp; Annual Filings</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Annual reports, franchise taxes, and regulatory deadlines tracked and filed so nothing slips through.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT US ============ -->
+<section id="about" class="relative py-28 lg:py-36 bg-bg overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+
+      <div class="lg:col-span-5" data-aos="fade-right">
+        <p class="eyebrow mb-5"><span class="eyebrow-dot"></span>About StatesAcross</p>
+        <h2 class="font-display font-medium text-4xl sm:text-5xl text-primary tracking-tight leading-tight">
+          Financial expertise, built around your business
+        </h2>
+        <p class="mt-6 text-ink/65 text-lg leading-relaxed">
+          StatesAcross Tax and Business Services was founded to give entrepreneurs and growing companies the same caliber of tax and compliance support once reserved for large enterprises. Our advisors work across the United States and Canada, combining deep regulatory knowledge with a genuinely responsive, personal approach.
+        </p>
+
+        <div class="mt-10 space-y-6">
+          <div class="flex gap-4">
+            <div class="value-icon"><i data-lucide="target"></i></div>
+            <div>
+              <h3 class="font-semibold text-primary">Our Mission</h3>
+              <p class="text-sm text-ink/60 mt-1 leading-relaxed">To make expert tax and compliance support accessible, transparent, and stress-free for every business we serve.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="value-icon"><i data-lucide="gem"></i></div>
+            <div>
+              <h3 class="font-semibold text-primary">Precision &amp; Integrity</h3>
+              <p class="text-sm text-ink/60 mt-1 leading-relaxed">Every filing and figure is reviewed with the accuracy your business and the law require.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="value-icon"><i data-lucide="handshake"></i></div>
+            <div>
+              <h3 class="font-semibold text-primary">A Partner, Not a Vendor</h3>
+              <p class="text-sm text-ink/60 mt-1 leading-relaxed">We build long-term relationships, learning your business well enough to advise, not just file.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 relative" data-aos="fade-left">
+        <div class="about-image-wrap">
+          <div class="about-image" role="img" aria-label="Illustration of a calculator with business documents and a growth chart">
+            <div class="about-image-overlay"></div>
+            <svg class="w-full h-full about-scene-svg" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice">
+              <rect width="600" height="480" style="fill:var(--scene-bg)"/>
+
+              <!-- ambient glows -->
+              <circle cx="150" cy="110" r="190" style="fill:var(--scene-glow-a)"/>
+              <circle cx="480" cy="380" r="170" style="fill:var(--scene-glow-b)"/>
+
+              <!-- backdrop grid -->
+              <g style="stroke:var(--scene-grid)" stroke-width="1">
+                <line x1="0" y1="120" x2="600" y2="120"/>
+                <line x1="0" y1="240" x2="600" y2="240"/>
+                <line x1="0" y1="360" x2="600" y2="360"/>
+                <line x1="150" y1="0" x2="150" y2="480"/>
+                <line x1="300" y1="0" x2="300" y2="480"/>
+                <line x1="450" y1="0" x2="450" y2="480"/>
+              </g>
+
+              <!-- invoice / checklist card -->
+              <g transform="translate(56,58)">
+                <rect width="164" height="118" rx="18" style="fill:var(--scene-card); stroke:var(--scene-card-stroke)" stroke-width="1.5"/>
+                <circle cx="30" cy="30" r="14" style="fill:var(--accent)" opacity="0.15"/>
+                <path d="M23,30 L28,35 L38,23" fill="none" style="stroke:var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="18" y="56" width="128" height="7" rx="3.5" style="fill:var(--scene-line-fill)"/>
+                <rect x="18" y="74" width="98" height="7" rx="3.5" style="fill:var(--scene-line-fill)"/>
+                <rect x="18" y="92" width="112" height="7" rx="3.5" style="fill:var(--scene-line-fill)"/>
+              </g>
+
+              <!-- growth chart card -->
+              <g transform="translate(40,296)">
+                <rect width="176" height="126" rx="18" style="fill:var(--scene-card); stroke:var(--scene-card-stroke)" stroke-width="1.5"/>
+                <path d="M22,32 L34,20 L46,20 M34,20 L46,34" fill="none" style="stroke:var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="24" y="72" width="18" height="34" rx="4" style="fill:var(--scene-line-fill)"/>
+                <rect x="52" y="58" width="18" height="48" rx="4" style="fill:var(--scene-line-fill)"/>
+                <rect x="80" y="44" width="18" height="62" rx="4" style="fill:var(--accent)" opacity="0.55"/>
+                <rect x="108" y="30" width="18" height="76" rx="4" style="fill:var(--accent)"/>
+              </g>
+
+              <!-- calculator -->
+              <g transform="translate(230,70)">
+                <rect width="210" height="330" rx="28" style="fill:var(--scene-calc-body); stroke:var(--scene-calc-stroke)" stroke-width="1.5"/>
+
+                <rect x="22" y="26" width="166" height="72" rx="12" style="fill:var(--scene-screen)"/>
+                <text x="38" y="52" style="fill:var(--scene-text-muted); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;">NET REVENUE</text>
+                <text x="172" y="82" text-anchor="end" style="fill:var(--scene-screen-text); font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">$128,540</text>
+
+                <rect x="22" y="116" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="64" y="116" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="106" y="116" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="148" y="116" width="40" height="30" rx="8" style="fill:var(--accent)" opacity="0.85"/>
+
+                <rect x="22" y="154" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="64" y="154" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="106" y="154" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="148" y="154" width="40" height="30" rx="8" style="fill:var(--accent)" opacity="0.85"/>
+
+                <rect x="22" y="192" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="64" y="192" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="106" y="192" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="148" y="192" width="40" height="68" rx="8" style="fill:var(--accent)"/>
+
+                <rect x="22" y="230" width="76" height="30" rx="8" style="fill:var(--scene-button)"/>
+                <rect x="106" y="230" width="34" height="30" rx="8" style="fill:var(--scene-button)"/>
+
+                <line x1="158" y1="216" x2="178" y2="216" style="stroke:#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <line x1="158" y1="236" x2="178" y2="236" style="stroke:#fff" stroke-width="2.4" stroke-linecap="round"/>
+              </g>
+
+              <!-- coin stack accent -->
+              <g transform="translate(452,110)">
+                <ellipse cx="0" cy="10" rx="26" ry="9" style="fill:var(--accent)" opacity="0.25"/>
+                <ellipse cx="0" cy="2" rx="26" ry="9" style="fill:var(--accent)" opacity="0.45"/>
+                <ellipse cx="0" cy="-6" rx="26" ry="9" style="fill:var(--accent)"/>
+                <text x="0" y="-2" text-anchor="middle" style="fill:#fff; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600;">$</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="highlight-card">
+            <div class="grid grid-cols-2 gap-5">
+              <div class="highlight-item">
+                <i data-lucide="award" class="highlight-icon"></i>
+                <p class="highlight-title">Experienced Team</p>
+                <p class="highlight-desc">Advisors who know tax &amp; compliance inside out.</p>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-check" class="highlight-icon"></i>
+                <p class="highlight-title">Meticulous Accuracy</p>
+                <p class="highlight-desc">Every filing reviewed so nothing gets missed.</p>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="shield-check" class="highlight-icon"></i>
+                <p class="highlight-title">Reliable Support</p>
+                <p class="highlight-desc">Consistent service you can count on.</p>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="heart" class="highlight-icon"></i>
+                <p class="highlight-title">Client-First Approach</p>
+                <p class="highlight-desc">Your goals guide every recommendation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="relative py-28 lg:py-36 bg-primary overflow-hidden">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+
+    <div class="max-w-2xl mb-16" data-aos="fade-up">
+      <p class="eyebrow eyebrow-light mb-5"><span class="eyebrow-dot eyebrow-dot-light"></span>Get In Touch</p>
+      <h2 class="font-display font-medium text-4xl sm:text-5xl text-white tracking-tight leading-tight">
+        Let's talk about your business
+      </h2>
+      <p class="mt-5 text-white/60 text-lg leading-relaxed">
+        Tell us where you're at and where you're headed. A dedicated advisor will follow up within one business day.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8">
+
+      <!-- Contact Info Card -->
+      <div class="lg:col-span-4 space-y-6" data-aos="fade-up">
+        <div class="contact-info-card">
+          <div class="flex items-start gap-4">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <p class="text-white/50 text-xs uppercase tracking-wider font-mono">Email</p>
+              <p class="text-white font-medium mt-1">hello@statesacross.com</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 mt-6">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <p class="text-white/50 text-xs uppercase tracking-wider font-mono">Phone</p>
+              <p class="text-white font-medium mt-1">+1 (800) 555-0134</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 mt-6">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <p class="text-white/50 text-xs uppercase tracking-wider font-mono">Office Hours</p>
+              <p class="text-white font-medium mt-1">Mon – Fri, 9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <svg viewBox="0 0 400 220" class="w-full h-full">
+            <rect width="400" height="220" fill="#0e2645"/>
+            <g stroke="#1E88E5" stroke-opacity="0.35">
+              <path d="M0,60 L400,40" stroke-width="1"/>
+              <path d="M0,120 L400,140" stroke-width="1"/>
+              <path d="M0,180 L400,170" stroke-width="1"/>
+              <path d="M60,0 L80,220" stroke-width="1"/>
+              <path d="M260,0 L300,220" stroke-width="1"/>
+            </g>
+            <circle cx="200" cy="110" r="7" fill="#1E88E5"/>
+            <circle cx="200" cy="110" r="16" fill="#1E88E5" opacity="0.25"/>
+          </svg>
+          <span class="map-label"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Serving clients across the USA &amp; Canada</span>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-8" data-aos="fade-up" data-aos-delay="100">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="form-field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Jordan Reyes" required>
+              <span class="field-error">Please enter your full name.</span>
+            </div>
+            <div class="form-field">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" name="companyName" placeholder="Reyes Consulting LLC">
+              <span class="field-error">Please enter your company name.</span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jordan@company.com" required>
+              <span class="field-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(800) 555-0134" required>
+              <span class="field-error">Please enter a valid phone number.</span>
+            </div>
+            <div class="form-field sm:col-span-2">
+              <label for="service">Service Required</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Business Registration</option>
+                <option>Tax Preparation</option>
+                <option>Accounting &amp; Bookkeeping</option>
+                <option>Payroll Services</option>
+                <option>Business Consulting</option>
+                <option>Compliance &amp; Annual Filings</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error">Please select a service.</span>
+            </div>
+            <div class="form-field sm:col-span-2">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your business and what you need help with." required></textarea>
+              <span class="field-error">Please enter a short message.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-ripple mt-2 inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-[#0B1F3A] transition-all duration-300 shadow-xl shadow-accent/20">
+            Send Message
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+
+          <p id="form-success" class="form-success">
+            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            Thank you — your message has been sent. A StatesAcross advisor will be in touch within one business day.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#081729] text-white/70">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div>
+        <a href="#home" class="flex items-center gap-2.5">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+            <rect x="1" y="1" width="32" height="32" rx="9" fill="#1E88E5" fill-opacity="0.15" stroke="#1E88E5" stroke-width="1.5"/>
+            <path d="M8 21 L14 14 L18.5 18 L26 9" stroke="#1E88E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="font-display font-semibold text-lg text-white">StatesAcross</span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed max-w-xs">Tax, accounting, and business compliance services for entrepreneurs and growing companies across the USA &amp; Canada.</p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Quick Links</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#home" class="footer-link">Home</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#about" class="footer-link">About Us</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Legal</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Connect</h3>
+        <div class="flex gap-3">
+          <a href="https://facebook.com/statesacross" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://instagram.com/statesacross" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://linkedin.com/company/statesacross" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="https://x.com/statesacross" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-14 pt-8 text-xs text-white/40 flex flex-col sm:flex-row justify-between gap-3">
+      <p>&copy; <span id="year"></span> StatesAcross Tax and Business Services. All rights reserved.</p>
+      <p>Designed for businesses that mean business.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
